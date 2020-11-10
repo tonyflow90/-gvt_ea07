@@ -15,7 +15,7 @@ export let VertexShader = `
         gl_Position = uPMatrix * uMVMatrix * vec4(aPosition, 1.0);
 
         float ndcZ = gl_Position.z / gl_Position.w;
-        float depthValue = .5 * ndcZ - .5;
+        float depthValue = 1.0 * ndcZ;
 
         vColor = vec4(depthValue, depthValue, depthValue, 1.0);
         vColor = (vColor + 1.0) / 2.0;
